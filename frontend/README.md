@@ -2,15 +2,17 @@
 
 # 📷 Lumina Gallery
 
-### *A Curated Editorial Photography Experience Powered by the Unsplash API*
+### *A curated editorial photography experience powered by the Unsplash API*
 
-[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-5.1.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Unsplash API](https://img.shields.io/badge/Unsplash%20API-Live%20Integration-black?style=for-the-badge&logo=unsplash&logoColor=white)](https://unsplash.com/developers)
+[![Unsplash API](https://img.shields.io/badge/Unsplash_API-Live_Integration-black?style=for-the-badge&logo=unsplash&logoColor=white)](https://unsplash.com/developers)
 [![CSS3](https://img.shields.io/badge/Pure_CSS-Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](LICENSE)
 
-[**Live Demo**](https://your-deployment-url.vercel.app) • [**Report Bug**](https://github.com/SourasishG/lumina-gallery/issues) • [**Request Feature**](https://github.com/SourasishG/lumina-gallery/issues)
+[**Live Demo**](https://your-deployment-url.vercel.app) •
+[**Report Bug**](https://github.com/SourasishG/lumina-gallery/issues) •
+[**Request Feature**](https://github.com/SourasishG/lumina-gallery/issues)
 
 </div>
 
@@ -18,29 +20,69 @@
 
 ## 📖 Overview
 
-**Lumina Gallery** is a modern, responsive web application designed for photography enthusiasts and visual storytellers. Built with **React 18** and **Vite**, it queries the official **Unsplash Search API** to deliver a fluid image-browsing experience across mobile, tablet, and desktop screens.
+**Lumina Gallery** is a modern and responsive image gallery built for photography enthusiasts and visual storytellers.
 
-Featuring a dark editorial aesthetic, glassmorphic UI controls, keyboard-driven navigation, and zero heavy CSS frameworks, Lumina demonstrates modern frontend best practices, robust error handling, and strict compliance with the Unsplash API Guidelines.
+The application uses **React**, **Vite**, and the official **Unsplash API** to provide a smooth image-browsing experience across mobile, tablet, and desktop devices.
+
+It features a dark editorial design, glassmorphic controls, responsive layouts, keyboard-accessible lightbox navigation, category filtering, search, pagination, loading states, and robust API error handling.
 
 ---
 
-## ✨ Key Features
+## ✨ Features
 
-- 🔍 **Live Search Engine**: Instant query-based search with input sanitation, loading states, and empty-state fallbacks.
-- 🗂️ **Curated Category Filters**: Rapid one-click exploration for *All, Nature, Architecture, Travel, People,* and *Animals*.
-- 🖼️ **Interactive Fullscreen Lightbox**:
-  - Full keyboard support: `Escape` to close, `ArrowLeft` / `ArrowRight` to step through photos.
-  - Infinite circular wrapping between the first and last loaded images.
-  - Automatic background scroll locking (`useBodyScrollLock`).
-- ⚡ **Incremental Pagination**: Smooth "Load More" pagination that preserves active search filters and prevents duplicate requests with `AbortController`.
-- 🎨 **Editorial Design System**:
-  - Dark charcoal backdrop with luminous gold accents (`#F59E0B`).
-  - Fluid typography, subtle ambient mesh glows, and custom slim scrollbars.
-  - Responsive CSS Grid (1 to 4 columns depending on viewport width).
-  - Shimmer skeleton loaders and fallback SVG placeholders for broken image URLs.
-- 🛡️ **Resilient API State Management**:
-  - Clear alerts for missing API keys, rate limits (`HTTP 429`), invalid credentials (`HTTP 401/403`), and offline network loss.
-- 🏷️ **100% Unsplash Attribution Compliant**: Direct referral links with UTM tracking for every photographer and photo.
+- 🔍 **Unsplash-powered search**  
+  Search for photos using keywords and receive results directly from the Unsplash API.
+
+- 🗂️ **Category filtering**  
+  Browse images by:
+  - All
+  - Nature
+  - Architecture
+  - Travel
+  - People
+  - Animals
+
+- 🖼️ **Fullscreen lightbox**
+  - Open any image in a fullscreen modal.
+  - Use `Escape` to close.
+  - Use `ArrowLeft` and `ArrowRight` to navigate.
+  - Navigate continuously between the first and last loaded images.
+  - Lock background scrolling while the modal is open.
+
+- ⚡ **Pagination**
+  - Load additional images with the “Load More” button.
+  - Preserve the current search query and category.
+  - Prevent duplicate requests.
+  - Cancel outdated requests using `AbortController`.
+
+- 🎨 **Editorial design**
+  - Dark charcoal background.
+  - Warm amber accent color.
+  - Glassmorphic interface elements.
+  - Responsive CSS Grid.
+  - Smooth hover effects and transitions.
+  - Shimmer loading skeletons.
+  - Fallback image handling.
+
+- 🛡️ **Error handling**
+  - Missing API key messages.
+  - Invalid API key messages.
+  - Network error handling.
+  - Unsplash rate-limit handling.
+  - Empty search-result states.
+  - Broken-image fallback support.
+
+- 🏷️ **Unsplash attribution**
+  - Photographer attribution is displayed.
+  - Photographer profile links are included.
+  - Unsplash referral links are included.
+  - Images use URLs returned directly by the Unsplash API.
+
+- 📱 **Responsive design**
+  - Mobile-first layout.
+  - Tablet support.
+  - Desktop support.
+  - No horizontal scrolling.
 
 ---
 
@@ -48,109 +90,269 @@ Featuring a dark editorial aesthetic, glassmorphic UI controls, keyboard-driven 
 
 | Layer | Technology |
 | :--- | :--- |
-| **Frontend Framework** | [React 18](https://react.dev/) (Functional Components & Custom Hooks) |
-| **Build Tooling** | [Vite 5](https://vitejs.dev/) |
-| **Icons** | [Lucide React](https://lucide.dev/) |
-| **Styling** | Pure CSS (Custom Properties, Glassmorphism, CSS Grid, Flexbox) |
-| **Data Source** | [Unsplash Search & Photos API](https://unsplash.com/developers) |
-| **Deployment** | [Vercel](https://vercel.com/) |
+| Frontend framework | [React 18](https://react.dev/) |
+| Build tool | [Vite 5](https://vitejs.dev/) |
+| Programming language | JavaScript and JSX |
+| Icons | [Lucide React](https://lucide.dev/) |
+| Styling | Pure CSS |
+| Image source | [Unsplash API](https://unsplash.com/developers) |
+| Deployment | [Vercel](https://vercel.com/) |
 
 ---
 
-## 📁 Project Architecture
+## 📁 Project Structure
 
-```plaintext
+```text
 lumina-gallery/
 ├── public/
-│   ├── favicon.svg                # Custom SVG brand favicon
-│   └── fallback-image.svg         # Graceful broken-image placeholder
+│   ├── favicon.svg
+│   └── fallback-image.svg
 ├── src/
+│   ├── assets/
+│   │   └── images/
 │   ├── components/
-│   │   ├── Header.jsx             # Sticky navigation with mobile drawer
-│   │   ├── Hero.jsx               # Hero section with embedded search
-│   │   ├── SearchBar.jsx          # Accessible search bar with clear button
-│   │   ├── CategoryFilter.jsx     # Category pill buttons
-│   │   ├── Gallery.jsx            # Dynamic CSS Grid gallery container
-│   │   ├── GalleryCard.jsx        # Image card with lazy load & attribution
-│   │   ├── Lightbox.jsx           # Accessible fullscreen modal
-│   │   ├── LoadingState.jsx       # Shimmer skeleton loader cards
-│   │   ├── ErrorState.jsx         # Friendly contextual error alerts
-│   │   ├── EmptyState.jsx         # "No results found" fallback screen
-│   │   ├── About.jsx              # Dynamic metrics and story section
-│   │   └── Footer.jsx             # Social links & Unsplash legal attribution
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── SearchBar.jsx
+│   │   ├── CategoryFilter.jsx
+│   │   ├── Gallery.jsx
+│   │   ├── GalleryCard.jsx
+│   │   ├── Lightbox.jsx
+│   │   ├── LoadingState.jsx
+│   │   ├── ErrorState.jsx
+│   │   ├── EmptyState.jsx
+│   │   ├── About.jsx
+│   │   └── Footer.jsx
 │   ├── hooks/
-│   │   ├── useGallery.js          # Main state & async data pipeline
-│   │   └── useBodyScrollLock.js   # Modal scroll prevention hook
+│   │   ├── useGallery.js
+│   │   └── useBodyScrollLock.js
 │   ├── services/
-│   │   └── unsplashApi.js         # Fetch wrapper with AbortController & error handling
+│   │   └── unsplashApi.js
 │   ├── utils/
-│   │   └── imageMapper.js         # API payload normalizer & UTM builder
-│   ├── App.jsx                    # Root component layout
-│   ├── main.jsx                   # React DOM entry point
-│   └── index.css                  # Global design system & animations
-├── .env.example                   # Environment variable template
-├── .gitignore                     # Git ignore rules (protects credentials)
-├── index.html                     # HTML5 shell
-├── package.json                   # Dependencies and scripts
-├── vite.config.js                 # Vite configuration
-└── README.md                      # Project documentation
+│   │   └── imageMapper.js
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .env.example
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
-🚀 Getting Started
-Follow these steps to run Lumina Gallery locally:
-1. Prerequisites
-Ensure you have Node.js (v16.0 or higher) installed.
-2. Clone the Repository
-code
-Bash
+### Component responsibilities
+
+| File | Responsibility |
+| :--- | :--- |
+| `Header.jsx` | Sticky navigation and mobile menu |
+| `Hero.jsx` | Hero content and search area |
+| `SearchBar.jsx` | Search input and submission |
+| `CategoryFilter.jsx` | Category filter controls |
+| `Gallery.jsx` | Gallery layout and image rendering |
+| `GalleryCard.jsx` | Individual image card and attribution |
+| `Lightbox.jsx` | Fullscreen image viewer |
+| `LoadingState.jsx` | Loading skeleton cards |
+| `ErrorState.jsx` | API and network error messages |
+| `EmptyState.jsx` | Empty search-result message |
+| `About.jsx` | Project description and statistics |
+| `Footer.jsx` | Footer content and attribution |
+| `useGallery.js` | Gallery state, search, filtering, and pagination |
+| `useBodyScrollLock.js` | Prevents page scrolling while lightbox is open |
+| `unsplashApi.js` | Unsplash API request functions |
+| `imageMapper.js` | Converts Unsplash data into app-friendly data |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) version 16 or higher
+- npm
+- Git
+- An Unsplash developer account
+
+---
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/SourasishG/lumina-gallery.git
 cd lumina-gallery
-3. Install Dependencies
-code
-Bash
-npm install
-4. Configure Unsplash API Access Key
-Register for a free developer account at Unsplash Developers.
-Create a new application and copy your Access Key.
-Create a .env file in your project root:
-code
-Bash
-cp .env.example .env
-Open .env and paste your key:
-code
-Env
-VITE_UNSPLASH_ACCESS_KEY=your_actual_unsplash_access_key_here
-5. Launch the Development Server
-code
-Bash
-npm run dev
-Open http://localhost:5173 in your browser.
-📦 Production Build
-To generate an optimized production bundle:
-code
-Bash
-npm run build
-To preview the production build locally:
-code
-Bash
-npm run preview
-🌐 Deploying to Vercel
-Push your code to your GitHub repository.
-Import the repository into Vercel.
-In the Environment Variables panel, add:
-Key: VITE_UNSPLASH_ACCESS_KEY
-Value: your_actual_unsplash_access_key_here
-Click Deploy.
-🔒 Security Best Practice Note:
-In a frontend-only Vite application, import.meta.env.VITE_UNSPLASH_ACCESS_KEY is embedded in the client bundle. For high-traffic enterprise applications, Unsplash requests should be proxied through a backend service or serverless function (such as Vercel Serverless /api/photos) to keep keys hidden.
-⚖️ License & Attribution
-Source Code: Released under the MIT License.
-Photography: All images are provided via the Unsplash API and are subject to the Unsplash License. Attribution to original creators is strictly displayed on all gallery cards and within the lightbox.
-👨‍💻 Author
-Sourasish
-GitHub: @SourasishG
-LinkedIn: Connect with me
-Email: sourasish@example.com
-<div align="center">
-<sub>Built with ❤️ using React & Vite. If you like this project, please consider giving it a ⭐!</sub>
-</div>
 ```
+
+---
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3. Create an Unsplash application
+
+1. Visit the [Unsplash Developers page](https://unsplash.com/developers).
+2. Sign in to your Unsplash account.
+3. Open **Your Apps**.
+4. Click **New Application**.
+5. Complete the application details.
+6. Copy your **Access Key**.
+
+---
+
+### 4. Configure the environment variable
+
+Create a `.env` file in the project root:
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and add your Unsplash Access Key:
+
+```env
+VITE_UNSPLASH_ACCESS_KEY=your_actual_unsplash_access_key_here
+```
+
+Do not commit the `.env` file to GitHub.
+
+---
+
+### 5. Start the development server
+
+```bash
+npm run dev
+```
+
+Open the local development URL shown in your terminal. It is usually:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 📦 Available Scripts
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Create a production build
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+---
+
+## 🌐 Deploying to Vercel
+
+### 1. Push the project to GitHub
+
+```bash
+git add .
+git commit -m "Create Lumina Gallery"
+git push origin main
+```
+
+### 2. Import the repository into Vercel
+
+1. Open [Vercel](https://vercel.com/).
+2. Sign in with GitHub.
+3. Click **Add New Project**.
+4. Select the `lumina-gallery` repository.
+5. Keep the default Vite settings.
+6. Click **Deploy**.
+
+### 3. Add the environment variable
+
+In the Vercel project settings, open **Environment Variables** and add:
+
+```text
+Name: VITE_UNSPLASH_ACCESS_KEY
+Value: your_actual_unsplash_access_key_here
+```
+
+Redeploy the project after adding the variable.
+
+---
+
+## 🔒 Security Notes
+
+The variable name starts with `VITE_` because Vite exposes these variables to frontend code.
+
+This means the API key can be discovered in the browser after deployment. Do not treat it as a fully private secret.
+
+For a high-traffic production application, use a backend or Vercel serverless function:
+
+```text
+React frontend
+      ↓
+Vercel serverless function
+      ↓
+Unsplash API
+```
+
+The serverless function can store the Unsplash key securely on the server side.
+
+Also make sure that:
+
+- `.env` is included in `.gitignore`.
+- The Access Key is never committed to GitHub.
+- The Secret Key is never used in frontend code.
+- The API is not called unnecessarily.
+- Pagination and search requests are controlled.
+
+---
+
+## ⚖️ License and Attribution
+
+### Source code
+
+This project is released under the [MIT License](LICENSE).
+
+### Photography
+
+Images are provided by the [Unsplash API](https://unsplash.com/developers) and remain subject to the Unsplash license and API guidelines.
+
+Lumina Gallery displays:
+
+- Photographer names.
+- Links to photographer profiles.
+- Links to the original Unsplash photos.
+- Links to Unsplash.
+- Referral parameters where required.
+
+---
+
+## 👨‍💻 Author
+
+### Sourasish Ghosh
+
+- GitHub: [@SourasishG](https://github.com/SourasishG)
+- LinkedIn: [Connect with me](https://www.linkedin.com/in/sourasish-ghosh07/)
+- Email: [sourasishghosh062@gmail.com](mailto:sourasishghosh062@gmail.com)
+
+---
+
+<div align="center">
+
+### Built with ❤️ using React, Vite, CSS, and the Unsplash API
+
+If you like this project, please consider giving it a ⭐ on GitHub.
+
+</div>
