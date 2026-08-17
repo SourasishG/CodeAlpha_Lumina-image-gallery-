@@ -11,8 +11,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](LICENSE)
 
 [**Live Demo**](https://your-deployment-url.vercel.app) •
-[**Report Bug**](https://github.com/SourasishG/lumina-gallery/issues) •
-[**Request Feature**](https://github.com/SourasishG/lumina-gallery/issues)
 
 </div>
 
