@@ -10,7 +10,7 @@
 [![CSS3](https://img.shields.io/badge/Pure_CSS-Glassmorphism-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![License: MIT](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](LICENSE)
 
-[**Live Demo**]([https://your-deployment-url.vercel.app](https://lumina-kohl-eight.vercel.app/)) 
+[**Live Demo**](https://lumina-kohl-eight.vercel.app/)
 
 </div>
 
